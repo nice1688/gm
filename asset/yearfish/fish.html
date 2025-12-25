@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>欢快畅游的小鱼特效</title>
+	<head>
+
+		<!--背景渐变效果样式代码开始（可忽略）-->
+		<style type="text/css">
+			html,body{width:100%;height:100%;margin:0;padding:0;}
+			body{
+			background: -webkit-linear-gradient(left,rgba(89,114,192,0.8),rgba(89,114,192,0.2));
+			background: -o-linear-gradient(right,rgba(89,114,192,0.8),rgba(89,114,192,0.2));
+			background: -moz-linear-gradient(right,rgba(89,114,192,0.8),rgba(89,114,192,0.2));
+			background: linear-gradient(to right, rgba(89,114,192,0.8), rgba(89,114,192,0.2));
+			background-size: 400% 400%;
+			animation: gradientBG 5s ease infinite;}
+			@keyframes gradientBG {
+			0% {
+			background-position: 0% 50%;
+			}
+			50% {
+			background-position: 100% 50%;
+			}
+			100% {
+			background-position: 0% 50%;
+			}
+			}
+		</style>
+		<!--背景渐变效果样式代码结束（可忽略）-->
+
+		<!--定义底部承载游动小鱼特效的div样式开始-->
+		<style type="text/css">
+			.container{
+			margin:0;
+			padding:0;
+			background-color:transparent;
+			width:100%;
+			height:200px;
+			z-index:-1;
+			position:fixed;
+			bottom:0;
+			left:0;}
+		</style>
+		<!--定义底部承载游动小鱼特效的div样式结束-->
+
+	</head>
+	<body>
+
+		<!--引入jquery-->
+		<script src="https://www.jq22.com/jquery/jquery-1.7.1.js"></script>
+
+		<!--承载游动小鱼特效的div容器-->
+		<div id="jsi-flying-fish-container" class="container"></div>
+
+		<!--核心特效定义js-->
+		<script src='fish.js'></script>
+
+	</body>
+</html>
